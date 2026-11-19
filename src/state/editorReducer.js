@@ -23,12 +23,11 @@ export function editorReducer(editor, action) {
         ...editor,
         rotation: editor.rotation === 0 ? 270 : editor.rotation - 90,
       };
-
     case "rotated_right":
-  return {
-    ...editor,
-    rotation: editor.rotation === 270 ? 0 : editor.rotation + 90,
-  };
+      return {
+        ...editor,
+        rotation: editor.rotation === 270 ? 0 : editor.rotation + 90,
+      };
 
     case "flip_toggled":
       return { ...editor, flipped: !editor.flipped };
